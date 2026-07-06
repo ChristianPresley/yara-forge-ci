@@ -1,0 +1,11 @@
+{
+  "_comment": "Benign application config - legitimate goodware sample.",
+  "service": "acme-web",
+  "port": 8080,
+  "logLevel": "info",
+  "features": {
+    "cache": true,
+    "retries": 3
+  },
+  "token": "TVpQ_this_is_not_a_pe_it_is_just_a_short_opaque_id"
+}

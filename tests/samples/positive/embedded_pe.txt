@@ -1,0 +1,7 @@
+SYNTHETIC TEST FIXTURE - NOT MALWARE
+This file contains ONLY the recognizable base64 prefix of a Windows PE/DOS
+header (no actual executable payload follows). It exists to exercise
+rule Base64_Encoded_PE_Heuristic.
+
+payload = "TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAA...TRUNCATED_SAFE..."
+dos_stub = "VGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1vZGU"

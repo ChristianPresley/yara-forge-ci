@@ -1,0 +1,6 @@
+SYNTHETIC TEST FIXTURE - NOT MALWARE
+Illustrative (non-functional) AMSI reflection snippet used only to exercise
+rule PowerShell_AMSI_Bypass. It references the well-known private field but
+does nothing when run.
+
+[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)

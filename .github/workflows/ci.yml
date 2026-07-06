@@ -1,0 +1,35 @@
+name: yara-ci
+
+# Validate the ruleset on every push and pull request: lint the Python,
+# then compile + policy-check + TP/FP + perf-test every YARA rule.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Lint (ruff)
+        run: ruff check .
+
+      - name: Validate ruleset (yforge dashboard)
+        run: python scripts/validate.py
+
+      - name: Run rule harness (pytest)
+        run: pytest -v

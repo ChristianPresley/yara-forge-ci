@@ -1,0 +1,5 @@
+Simulated Sysmon Event 1 (ProcessCreate) - SYNTHETIC TEST FIXTURE, NOT MALWARE
+CommandLine:
+powershell.exe -nop -w hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkA
+User: CORP\jdoe
+This is a hand-crafted trigger file for rule PowerShell_EncodedCommand.

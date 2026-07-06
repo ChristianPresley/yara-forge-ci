@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!-- Benign first-party login page - legitimate goodware sample.
+     Posts to a same-origin relative endpoint, no base64 second stage,
+     no phishing collector filenames. Must NOT match the phishing rule. -->
+<html>
+<head><title>Acme Intranet - Login</title></head>
+<body>
+  <h1>Acme Intranet</h1>
+  <form method="post" action="/api/session">
+    <label>Username <input type="text" name="user"></label>
+    <label>Password <input type="password" name="pass"></label>
+    <button type="submit">Log in</button>
+  </form>
+</body>
+</html>

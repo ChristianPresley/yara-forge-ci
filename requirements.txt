@@ -1,0 +1,5 @@
+# Runtime + test dependencies for the YARA CI harness.
+yara-python>=4.5,<5
+PyYAML>=6.0
+pytest>=7.4
+ruff>=0.5

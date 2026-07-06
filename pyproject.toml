@@ -1,0 +1,36 @@
+[project]
+name = "yara-forge-ci"
+version = "1.0.0"
+description = "A YARA rule repository with a rules-as-code CI/testing harness (compile, metadata policy, TP/FP corpus, perf budget)."
+authors = [{ name = "Christian Presley" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "yara-python>=4.5,<5",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "ruff>=0.5",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+# Sensible default lint set: pyflakes, pycodestyle, isort, bugbear, pyupgrade.
+select = ["E", "F", "I", "B", "UP"]
+ignore = [
+    "E731",  # allow small lambda color helpers in scripts/validate.py
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["B011"]

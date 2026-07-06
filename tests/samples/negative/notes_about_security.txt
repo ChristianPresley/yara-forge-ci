@@ -1,0 +1,9 @@
+Benign blog draft - legitimate goodware sample.
+
+In this article we discuss ransomware and prompt injection at a conceptual
+level. We mention that operators sometimes demand bitcoin, and that defenders
+should educate users. We also note that AI assistants must resist manipulation.
+
+Crucially, this text contains NO actual encryption claim, NO onion/contact
+channel paired with a threat, and NO verbatim jailbreak override phrase, so a
+well-built rule should treat it as benign and NOT alert.

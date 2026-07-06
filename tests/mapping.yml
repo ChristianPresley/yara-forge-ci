@@ -1,0 +1,26 @@
+# Positive-corpus mapping: which sample file MUST match which rule.
+#
+# The test harness (tests/test_rules.py) reads this file and asserts that:
+#   * each listed sample triggers exactly its expected rule(s) (true positive), and
+#   * no sample in tests/samples/negative/ triggers ANY rule (false positive guard).
+#
+# Paths are relative to tests/samples/positive/.
+# Each entry maps: <sample filename> -> <expected rule name(s)>
+
+expected_matches:
+  ps_encoded_command.txt:      [PowerShell_EncodedCommand]
+  ps_download_cradle.txt:      [PowerShell_DownloadCradle]
+  ps_amsi_bypass.txt:          [PowerShell_AMSI_Bypass]
+  webshell.php:                [Webshell_PHP_Eval_Base64]
+  webshell.aspx:               [Webshell_ASPX_CodeExec]
+  phish_login.html:            [Phishing_Kit_CredHarvest_HTML]
+  lnk_dropper_cmdline.txt:     [LNK_ScriptHost_Dropper]
+  embedded_pe.txt:             [Base64_Encoded_PE_Heuristic]
+  llm_jailbreak.txt:           [LLM_Jailbreak_PromptInjection]
+  ransom_note.txt:             [Ransomware_Note_Template]
+
+# Per-rule scan-time budget for the whole corpus, in milliseconds. A rule that
+# exceeds this against the combined positive+negative corpus is flagged as a
+# performance regression (see PERF_BUDGET_MS in test_rules.py). Tune per-rule
+# here if a rule legitimately needs more headroom.
+perf_budget_ms: 50

@@ -1,0 +1,9 @@
+SYNTHETIC TEST FIXTURE - NOT MALWARE
+Fabricated ransom-note text used only to exercise rule Ransomware_Note_Template.
+No files are encrypted; every identifier below is fictional.
+
+!!! ATTENTION !!!
+All your files have been encrypted.
+To decrypt your files, contact us at recovery@example.invalid or visit our
+portal at abcdefghijklmnopqrstuvwxyz234567abcdefghijklmnopqrstuvwx.onion
+Do not rename encrypted files or the decryption key will be permanently deleted.

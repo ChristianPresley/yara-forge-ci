@@ -1,0 +1,5 @@
+SYNTHETIC TEST FIXTURE - NOT MALWARE
+Extracted (simulated) command line from a weaponized shortcut, used only to
+exercise rule LNK_ScriptHost_Dropper:
+
+mshta.exe vbscript:CreateObject("Wscript.Shell").Run("powershell -w hidden -nop -ExecutionPolicy Bypass -Command exit",0)(window.close)
